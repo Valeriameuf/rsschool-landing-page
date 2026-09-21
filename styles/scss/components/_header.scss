@@ -1,1 +1,132 @@
 @use "../abstracts/variables" as *;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
+  height: $header-height;
+  padding: 0 $spacing-lg;
+  background-color: $color-hero-bg;
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__logo {
+    height: 48px;
+  }
+
+  &__logo-text {
+    font-size: $font-size-lg;
+    color: $color-text;
+  }
+
+  &__search {
+    position: relative;
+    flex: 1;
+    max-width: 450px;
+  }
+
+  &__search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 40px 0 $spacing-md;
+    border: 1px solid $color-accent-dark;
+    border-radius: 20px;
+    background-color: $color-bg;
+    font-size: $font-size-sm;
+
+    &::placeholder {
+      color: $color-accent-dark;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-accent-bright;
+    }
+  }
+
+  &__search-button {
+    position: absolute;
+    top: 8px;
+    right: $spacing-sm;
+    width: 24px;
+    height: 24px;
+    color: $color-accent-dark;
+  }
+
+  &__search-icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  // Меню
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+  }
+
+  &__menu-link {
+    font-size: $font-size-lg;
+    color: $color-accent-bright;
+
+    &:hover {
+      color: $color-accent-dark;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .header {
+    padding: 0 $spacing-md;
+
+    &__search {
+      max-width: 260px;
+    }
+
+    &__menu {
+      gap: $spacing-md;
+    }
+
+    &__menu-link {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: $spacing-sm $spacing-md;
+
+    &__search {
+      order: 3;
+      flex-basis: 100%;
+      max-width: none;
+    }
+
+    &__menu-link {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .header {
+    &__logo {
+      height: 32px;
+    }
+
+    &__menu {
+      gap: $spacing-sm;
+    }
+
+    &__menu-link {
+      font-size: $font-size-xs;
+    }
+  }
+}
