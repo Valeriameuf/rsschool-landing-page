@@ -7,6 +7,7 @@
   --color-accent-dark: #{$color-accent-dark};
   --color-accent-bright: #{$color-accent-bright};
   --color-text: #{$color-text};
+  --color-on-accent: #fff;
 }
 
 :root[data-theme="dark"] {
@@ -16,4 +17,5 @@
   --color-accent-dark: #9fb59a;
   --color-accent-bright: #7fc48b;
   --color-text: #ecf0e8;
+  --color-on-accent: #1b211a;
 }

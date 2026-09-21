@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+
+.catalog {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  &__title {
+    font-size: $font-size-3xl;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .catalog {
+    padding-top: $spacing-lg;
+    padding-bottom: $spacing-lg;
+
+    &__title {
+      font-size: $font-size-xs;
+    }
+  }
+}
