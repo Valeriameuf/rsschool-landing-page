@@ -1,8 +1,10 @@
 @use "../abstracts/variables" as *;
 
-.container {
+$wrapper-width: 1200px;
+
+.wrapper {
   width: 100%;
-  max-width: $breakpoint-xl;
+  max-width: $wrapper-width;
   margin: 0 auto;
   padding: 0 $spacing-md;
 }

@@ -10,10 +10,10 @@ h6 {
 }
 
 a {
-  color: $color-accent-bright;
+  color: var(--color-accent-bright);
   text-decoration: none;
 
   &:hover {
-    color: $color-accent-dark;
+    color: var(--color-accent-dark);
   }
 }

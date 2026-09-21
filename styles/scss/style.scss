@@ -1,13 +1,12 @@
 @use "abstracts/variables";
 
 @use "base/fonts";
+@use "base/theme";
 @use "base/reset";
 @use "base/typography";
 
-@use "layout/container";
+@use "layout/wrapper";
 
 @use "components/header";
-
-@use "pages/index";
 
 @use "utils/helpers";

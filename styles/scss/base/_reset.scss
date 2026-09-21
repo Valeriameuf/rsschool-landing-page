@@ -4,31 +4,22 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
   padding: 0;
 }
 
-html {
-  font-size: $font-size-base;
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   font-family: $font-family-base;
+  font-size: $font-size-base;
   line-height: 1.5;
-  color: $color-text;
-  background-color: $color-bg;
-  -webkit-font-smoothing: antialiased;
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 img,
-picture,
-video,
 svg {
   display: block;
   max-width: 100%;
@@ -36,9 +27,7 @@ svg {
 }
 
 input,
-button,
-textarea,
-select {
+button {
   font: inherit;
   color: inherit;
 }
@@ -49,7 +38,12 @@ button {
   background: none;
 }
 
-ul,
-ol {
+ul {
   list-style: none;
+}
+
+@media (max-width: $breakpoint-md) {
+  body {
+    font-size: $font-size-xs;
+  }
 }
