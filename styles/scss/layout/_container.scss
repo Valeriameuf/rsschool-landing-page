@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as *;
+
+.container {
+  width: 100%;
+  max-width: $breakpoint-xl;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
