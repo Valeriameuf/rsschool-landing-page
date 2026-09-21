@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+:root {
+  --color-bg: #{$color-bg};
+  --color-hero-bg: #{$color-hero-bg};
+  --color-accent: #{$color-accent};
+  --color-accent-dark: #{$color-accent-dark};
+  --color-accent-bright: #{$color-accent-bright};
+  --color-text: #{$color-text};
+  --color-on-accent: #fff;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #1b211a;
+  --color-hero-bg: #262d24;
+  --color-accent: #2f3a2d;
+  --color-accent-dark: #9fb59a;
+  --color-accent-bright: #7fc48b;
+  --color-text: #ecf0e8;
+  --color-on-accent: #1b211a;
+}
+
+:root[data-theme="dark"] {
+  .header__logo,
+  .footer__logo {
+    filter: invert(1);
+  }
+}

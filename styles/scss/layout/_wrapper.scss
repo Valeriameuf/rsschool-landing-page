@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+
+$wrapper-width: 1200px;
+
+.wrapper {
+  width: 100%;
+  max-width: $wrapper-width;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}

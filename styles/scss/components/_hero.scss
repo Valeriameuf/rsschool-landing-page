@@ -1,0 +1,111 @@
+@use "../abstracts/variables" as *;
+
+.hero {
+  padding: 48px 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  &__label {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-xs;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent-bright);
+  }
+
+  &__title {
+    margin-bottom: $spacing-md;
+    font-size: $font-size-3xl;
+  }
+
+  &__text {
+    max-width: 480px;
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-lg;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__button {
+    padding: 12px 28px;
+    border-radius: 999px;
+    background-color: var(--color-accent-bright);
+    font-size: $font-size-base;
+    font-weight: 700;
+    color: var(--color-on-accent);
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: var(--color-accent-dark);
+      color: var(--color-on-accent);
+    }
+  }
+
+  &__link {
+    font-size: $font-size-base;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .hero {
+    &__inner {
+      gap: $spacing-lg;
+    }
+
+    &__title {
+      font-size: $font-size-2xl;
+    }
+
+    &__text {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .hero {
+    padding: $spacing-lg 0;
+
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__label,
+    &__title,
+    &__text,
+    &__button,
+    &__link {
+      font-size: $font-size-xs;
+    }
+
+    &__button {
+      padding: 10px 24px;
+    }
+
+    &__image {
+      max-height: 260px;
+      border-radius: 16px;
+    }
+  }
+}

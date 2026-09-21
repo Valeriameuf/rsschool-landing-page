@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CinemaЕшь — рецепты блюд и напитков из любимых фильмов и сериалов.">
+  <title>CinemaЕшь — рецепты из любимых фильмов</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/slider.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__inner">
+      <a class="header__logo-link" href="index.html">
+        <img class="header__logo" src="images/foodcinema.png" alt="CinemaЕшь">
+        <span class="header__logo-text">CinemaЕшь</span>
+      </a>
+      <form class="header__search" role="search">
+        <input class="header__search-input" type="search" name="q" placeholder="Поиск…">
+        <button class="header__search-button" type="submit" aria-label="Поиск">
+          <svg class="header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+      <nav class="header__nav" aria-label="Основная навигация">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a class="header__menu-link header__menu-link--active" aria-current="page" href="index.html">Главная</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="catalog.html">Каталог</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="index.html#about">О нас</a></li>
+        </ul>
+      </nav>
+      <button class="header__theme-toggle" type="button" aria-label="Переключить тему" aria-pressed="false">
+        <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+        </svg>
+        <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+      </button>
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <svg class="header__burger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="wrapper">
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <p class="hero__label">Кино и кухня</p>
+            <h1 class="hero__title">Рецепты из любимых фильмов</h1>
+            <p class="hero__text">CinemaЕшь собирает блюда и напитки, которые мы видели на экране. Выбирайте фильм, готовьте то же самое дома и смотрите с удовольствием.</p>
+            <div class="hero__actions">
+              <a class="hero__button" href="catalog.html">Смотреть рецепты</a>
+              <a class="hero__link" href="index.html#about">О проекте</a>
+            </div>
+          </div>
+          <img class="hero__image" src="images/twinpix.jpeg" alt="Кадр из сериала «Твин Пикс»: герои держат тарелку с вишнёвым пирогом">
+        </div>
+      </section>
+      <section class="slider">
+        <div class="slider__header">
+          <h2 class="slider__title">Популярные рецепты из кино</h2>
+          <div class="slider__controls">
+            <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий рецепт">←</button>
+            <button class="slider__button slider__button--next" type="button" aria-label="Следующий рецепт">→</button>
+          </div>
+        </div>
+        <div class="slider__window">
+          <ul class="slider__track" tabindex="0" aria-label="Рецепты из кино">
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/omletbear.jpeg" alt="Омлет с чипсами и зеленью" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/bear.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
+                    <span>«Медведь» · сериал, 2022</span>
+                  </p>
+                  <h3 class="card__title">Омлет с чипсами</h3>
+                  <p class="card__text">Нежный омлет с хрустящими чипсами и зеленью. Быстрый завтрак в стиле ресторанной кухни.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: омлет с чипсами">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/beartort.webp" alt="Кусочки многослойного шоколадного торта" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/bears.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
+                    <span>«Медведь» · сериал, 2022</span>
+                  </p>
+                  <h3 class="card__title">Шоколадный торт</h3>
+                  <p class="card__text">Многослойный шоколадный торт с плотным кремом. Десерт для тех, кто любит с характером.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: шоколадный торт">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/indeika.jpg" alt="Запечённая индейка с апельсинами и розмарином" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/friends.jpg" alt="Кадр из сериала «Друзья»" loading="lazy">
+                    <span>«Друзья» · сериал, 1994</span>
+                  </p>
+                  <h3 class="card__title">Запечённая индейка</h3>
+                  <p class="card__text">Праздничная индейка с апельсинами и розмарином. Главное блюдо для большой дружной компании.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: запечённая индейка">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/pay.jpg" alt="Кусок вишнёвого пирога с решёткой из теста" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/twinpix.jpeg" alt="Кадр из сериала «Твин Пикс»" loading="lazy">
+                    <span>«Твин Пикс» · сериал, 1990</span>
+                  </p>
+                  <h3 class="card__title">Вишнёвый пирог</h3>
+                  <p class="card__text">Сочный вишнёвый пирог с решёткой из теста. Идеально сочетается с чашкой чёрного кофе.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: вишнёвый пирог">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/ratatui.jpg" alt="Рататуй из тонко нарезанных овощей на чугунной сковороде" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/ratata.webp" alt="Постер мультфильма «Рататуй»" loading="lazy">
+                    <span>«Рататуй» · мультфильм, 2007</span>
+                  </p>
+                  <h3 class="card__title">Рататуй</h3>
+                  <p class="card__text">Запечённые овощи тонкими ломтиками с чесноком и тимьяном. Блюдо, с которого начинается история мультфильма.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: рататуй">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/limonmonika.jpg" alt="Паста с лимоном, пармезаном и зеленью" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/friends.jpg" alt="Кадр из сериала «Друзья»" loading="lazy">
+                    <span>«Друзья» · сериал, 1994</span>
+                  </p>
+                  <h3 class="card__title">Лимонная паста</h3>
+                  <p class="card__text">Паста с лимоном, пармезаном и свежей зеленью. Лёгкий ужин, который легко повторить дома.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: лимонная паста">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="steps" id="about">
+        <h2 class="steps__title">О проекте: как это работает</h2>
+        <p class="steps__text">CinemaЕшь помогает повторить блюда из любимых фильмов и сериалов. Всё просто, три шага от экрана до стола.</p>
+        <ol class="steps__list">
+          <li class="step">
+            <p class="step__number" aria-hidden="true">1</p>
+            <h3 class="step__title">Выберите фильм</h3>
+            <p class="step__text">Найдите любимый фильм или сериал и посмотрите, какие блюда в нём появляются.</p>
+          </li>
+          <li class="step">
+            <p class="step__number" aria-hidden="true">2</p>
+            <h3 class="step__title">Откройте рецепт</h3>
+            <p class="step__text">Ингредиенты и шаги приготовления собраны на одной странице, ничего лишнего.</p>
+          </li>
+          <li class="step">
+            <p class="step__number" aria-hidden="true">3</p>
+            <h3 class="step__title">Готовьте и смотрите</h3>
+            <p class="step__text">Повторите блюдо дома и устройте киновечер с тем же угощением, что на экране.</p>
+          </li>
+        </ol>
+      </section>
+      <section class="reviews">
+        <h2 class="reviews__title">Отзывы наших гостей</h2>
+        <ul class="reviews__list">
+          <li class="review">
+            <p class="review__rating" role="img" aria-label="Оценка: 5 из 5">★★★★★</p>
+            <blockquote class="review__text">Приготовила омлет с чипсами после «Медведя», и вся семья просила добавки. Рецепт понятный, всё получилось с первого раза.</blockquote>
+            <div class="review__author">
+              <span class="review__avatar" aria-hidden="true">А</span>
+              <div>
+                <p class="review__name">Анна К.</p>
+                <p class="review__dish">Приготовила: омлет с чипсами</p>
+              </div>
+            </div>
+          </li>
+          <li class="review">
+            <p class="review__rating" role="img" aria-label="Оценка: 5 из 5">★★★★★</p>
+            <blockquote class="review__text">Устроили киновечер с «Друзьями» и запекли индейку. Гости были в восторге, а инструкции очень подробные.</blockquote>
+            <div class="review__author">
+              <span class="review__avatar" aria-hidden="true">Д</span>
+              <div>
+                <p class="review__name">Дмитрий С.</p>
+                <p class="review__dish">Приготовил: запечённая индейка</p>
+              </div>
+            </div>
+          </li>
+          <li class="review">
+            <p class="review__rating" role="img" aria-label="Оценка: 5 из 5">★★★★★</p>
+            <blockquote class="review__text">Вишнёвый пирог из «Твин Пикса» стал нашей семейной традицией на выходные. Спасибо за такую идею!</blockquote>
+            <div class="review__author">
+              <span class="review__avatar" aria-hidden="true">М</span>
+              <div>
+                <p class="review__name">Мария Л.</p>
+                <p class="review__dish">Приготовила: вишнёвый пирог</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__logo-link" href="index.html">
+            <img class="footer__logo" src="images/foodcinema.png" alt="CinemaЕшь">
+            <span class="footer__logo-text">CinemaЕшь</span>
+          </a>
+          <p class="footer__slogan">Рецепты из любимых фильмов</p>
+          <p class="footer__about">Готовим блюда и напитки, которые видели на экране.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Навигация по сайту">
+          <h2 class="footer__title">Навигация</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="index.html">Главная</a></li>
+            <li><a class="footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="footer__link" href="index.html#about">О проекте</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <h2 class="footer__title">Контакты</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B8%D0%B5%D0%B2%2C%20%D1%83%D0%BB.%20%D0%9A%D1%80%D0%B5%D1%89%D0%B0%D1%82%D0%B8%D0%BA%2C%2022" target="_blank" rel="noopener noreferrer">Киев, ул. Крещатик, 22</a></li>
+            <li><a class="footer__link" href="tel:+380440000000">+38&nbsp;(044)&nbsp;000&#8209;00&#8209;00</a></li>
+            <li><a class="footer__link" href="mailto:hello@cinemaesh.example">hello@cinemaesh.example</a></li>
+          </ul>
+        </div>
+        <div class="footer__external">
+          <h2 class="footer__title">Мы в сети</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="https://github.com/Valeriameuf" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a class="footer__link" href="https://rs.school" target="_blank" rel="noopener noreferrer">RS School</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 CinemaЕшь</p>
+        <div class="footer__credits">
+          <a class="footer__rs-link" href="https://rs.school" target="_blank" rel="noopener noreferrer" aria-label="RS School">
+            <img class="footer__rs-logo" src="images/rss-logo.svg" alt="RS School">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

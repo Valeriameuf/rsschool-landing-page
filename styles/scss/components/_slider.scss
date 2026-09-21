@@ -1,0 +1,96 @@
+@use "../abstracts/variables" as *;
+
+.slider {
+  padding: 48px 0;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+  }
+
+  &__controls {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-accent-dark);
+    border-radius: 50%;
+    font-size: $font-size-base;
+    color: var(--color-accent-dark);
+
+    &:hover {
+      border-color: var(--color-accent-bright);
+      color: var(--color-accent-bright);
+    }
+  }
+
+  &__track {
+    --slider-count: 3;
+    --slider-gap: #{$spacing-lg};
+    display: flex;
+    gap: var(--slider-gap);
+    padding: $spacing-sm 0 $spacing-md;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex: 0 0 calc((100% - (var(--slider-count) - 1) * var(--slider-gap)) / var(--slider-count));
+    min-width: 0;
+    scroll-snap-align: start;
+
+    .card {
+      flex: 1;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .slider__track {
+    --slider-count: 2;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .slider {
+    padding: $spacing-lg 0;
+
+    &__header {
+      margin-bottom: $spacing-md;
+    }
+
+    &__title {
+      font-size: $font-size-xs;
+    }
+
+    &__button {
+      font-size: $font-size-xs;
+    }
+
+    &__track {
+      --slider-gap: #{$spacing-md};
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .slider__track {
+    --slider-count: 1;
+  }
+}

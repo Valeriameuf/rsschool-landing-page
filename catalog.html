@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог рецептов из фильмов и сериалов на CinemaЕшь.">
+  <title>Каталог — CinemaЕшь</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/theme.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__inner">
+      <a class="header__logo-link" href="index.html">
+        <img class="header__logo" src="images/foodcinema.png" alt="CinemaЕшь">
+        <span class="header__logo-text">CinemaЕшь</span>
+      </a>
+      <form class="header__search" role="search">
+        <input class="header__search-input" type="search" name="q" placeholder="Поиск…">
+        <button class="header__search-button" type="submit" aria-label="Поиск">
+          <svg class="header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+      <nav class="header__nav" aria-label="Основная навигация">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a class="header__menu-link" href="index.html">Главная</a></li>
+          <li class="header__menu-item"><a class="header__menu-link header__menu-link--active" aria-current="page" href="catalog.html">Каталог</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="index.html#about">О нас</a></li>
+        </ul>
+      </nav>
+      <button class="header__theme-toggle" type="button" aria-label="Переключить тему" aria-pressed="false">
+        <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+        </svg>
+        <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+      </button>
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <svg class="header__burger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="wrapper catalog">
+      <h1 class="catalog__title">Каталог рецептов</h1>
+      <p class="catalog__text">Выберите категорию и найдите блюдо из любимого фильма или сериала.</p>
+      <div class="catalog__tabs" role="group" aria-label="Категории рецептов">
+        <button class="catalog__tab catalog__tab--active" type="button" aria-pressed="true">Все</button>
+        <button class="catalog__tab" type="button" aria-pressed="false">Блюда</button>
+        <button class="catalog__tab" type="button" aria-pressed="false">Десерты</button>
+        <button class="catalog__tab" type="button" aria-pressed="false">Напитки</button>
+      </div>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <article class="card">
+            <img class="card__image" src="images/omletbear.jpeg" alt="Омлет с чипсами и зеленью" loading="lazy">
+            <div class="card__body">
+              <p class="card__film">
+                <img class="card__film-image" src="images/bear.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
+                <span>«Медведь» · сериал, 2022</span>
+              </p>
+              <h2 class="card__title">Омлет с чипсами</h2>
+              <p class="card__text">Нежный омлет с хрустящими чипсами и зеленью. Быстрый завтрак в стиле ресторанной кухни.</p>
+              <p class="card__meta">15 мин · Легко</p>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="card">
+            <img class="card__image" src="images/beartort.webp" alt="Кусочки многослойного шоколадного торта" loading="lazy">
+            <div class="card__body">
+              <p class="card__film">
+                <img class="card__film-image" src="images/bears.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
+                <span>«Медведь» · сериал, 2022</span>
+              </p>
+              <h2 class="card__title">Шоколадный торт</h2>
+              <p class="card__text">Многослойный шоколадный торт с плотным кремом. Десерт для тех, кто любит с характером.</p>
+              <p class="card__meta">90 мин · Средне</p>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="card">
+            <img class="card__image" src="images/indeika.jpg" alt="Запечённая индейка с апельсинами и розмарином" loading="lazy">
+            <div class="card__body">
+              <p class="card__film">
+                <img class="card__film-image" src="images/friends.jpg" alt="Кадр из сериала «Друзья»" loading="lazy">
+                <span>«Друзья» · сериал, 1994</span>
+              </p>
+              <h2 class="card__title">Запечённая индейка</h2>
+              <p class="card__text">Праздничная индейка с апельсинами и розмарином. Главное блюдо для большой дружной компании.</p>
+              <p class="card__meta">180 мин · Сложно</p>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="card">
+            <img class="card__image" src="images/pay.jpg" alt="Кусок вишнёвого пирога с решёткой из теста" loading="lazy">
+            <div class="card__body">
+              <p class="card__film">
+                <img class="card__film-image" src="images/twinpix.jpeg" alt="Кадр из сериала «Твин Пикс»" loading="lazy">
+                <span>«Твин Пикс» · сериал, 1990</span>
+              </p>
+              <h2 class="card__title">Вишнёвый пирог</h2>
+              <p class="card__text">Сочный вишнёвый пирог с решёткой из теста. Идеально сочетается с чашкой чёрного кофе.</p>
+              <p class="card__meta">75 мин · Средне</p>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item catalog__item--extra">
+          <article class="card">
+            <img class="card__image" src="images/ratatui.jpg" alt="Рататуй из тонко нарезанных овощей на чугунной сковороде" loading="lazy">
+            <div class="card__body">
+              <p class="card__film">
+                <img class="card__film-image" src="images/ratata.webp" alt="Постер мультфильма «Рататуй»" loading="lazy">
+                <span>«Рататуй» · мультфильм, 2007</span>
+              </p>
+              <h2 class="card__title">Рататуй</h2>
+              <p class="card__text">Запечённые овощи тонкими ломтиками с чесноком и тимьяном. Блюдо, с которого начинается история.</p>
+              <p class="card__meta">60 мин · Легко</p>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item catalog__item--extra">
+          <article class="card">
+            <img class="card__image" src="images/limonmonika.jpg" alt="Паста с лимоном, пармезаном и зеленью" loading="lazy">
+            <div class="card__body">
+              <p class="card__film">
+                <img class="card__film-image" src="images/friends.jpg" alt="Кадр из сериала «Друзья»" loading="lazy">
+                <span>«Друзья» · сериал, 1994</span>
+              </p>
+              <h2 class="card__title">Лимонная паста</h2>
+              <p class="card__text">Паста с лимоном, пармезаном и свежей зеленью. Лёгкий ужин, который легко повторить дома.</p>
+              <p class="card__meta">25 мин · Легко</p>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item catalog__item--extra">
+          <article class="card">
+            <img class="card__image" src="images/ratatui.jpg" alt="Запечённые овощи с тимьяном на сковороде" loading="lazy">
+            <div class="card__body">
+              <p class="card__film">
+                <img class="card__film-image" src="images/ratata.webp" alt="Постер мультфильма «Рататуй»" loading="lazy">
+                <span>«Рататуй» · мультфильм, 2007</span>
+              </p>
+              <h2 class="card__title">Овощи с тимьяном</h2>
+              <p class="card__text">Разноцветные овощи, запечённые с чесноком и травами. Отличный гарнир к любому мясу.</p>
+              <p class="card__meta">40 мин · Легко</p>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item catalog__item--extra">
+          <article class="card">
+            <img class="card__image" src="images/beartort.webp" alt="Ломтики шоколадного кекса на тарелке" loading="lazy">
+            <div class="card__body">
+              <p class="card__film">
+                <img class="card__film-image" src="images/bear.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
+                <span>«Медведь» · сериал, 2022</span>
+              </p>
+              <h2 class="card__title">Шоколадный кекс</h2>
+              <p class="card__text">Влажный шоколадный кекс с насыщенным вкусом. Быстрая выпечка к чаю или кофе.</p>
+              <p class="card__meta">45 мин · Легко</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <button class="catalog__more" type="button">Показать ещё</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__logo-link" href="index.html">
+            <img class="footer__logo" src="images/foodcinema.png" alt="CinemaЕшь">
+            <span class="footer__logo-text">CinemaЕшь</span>
+          </a>
+          <p class="footer__slogan">Рецепты из любимых фильмов</p>
+          <p class="footer__about">Готовим блюда и напитки, которые видели на экране.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Навигация по сайту">
+          <h2 class="footer__title">Навигация</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="index.html">Главная</a></li>
+            <li><a class="footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="footer__link" href="index.html#about">О проекте</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <h2 class="footer__title">Контакты</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="https://www.google.com/maps/search/?api=1&query=%D0%9A%D0%B8%D0%B5%D0%B2%2C%20%D1%83%D0%BB.%20%D0%9A%D1%80%D0%B5%D1%89%D0%B0%D1%82%D0%B8%D0%BA%2C%2022" target="_blank" rel="noopener noreferrer">Киев, ул. Крещатик, 22</a></li>
+            <li><a class="footer__link" href="tel:+380440000000">+38&nbsp;(044)&nbsp;000&#8209;00&#8209;00</a></li>
+            <li><a class="footer__link" href="mailto:hello@cinemaesh.example">hello@cinemaesh.example</a></li>
+          </ul>
+        </div>
+        <div class="footer__external">
+          <h2 class="footer__title">Мы в сети</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="https://github.com/Valeriameuf" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a class="footer__link" href="https://rs.school" target="_blank" rel="noopener noreferrer">RS School</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 CinemaЕшь</p>
+        <div class="footer__credits">
+          <a class="footer__rs-link" href="https://rs.school" target="_blank" rel="noopener noreferrer" aria-label="RS School">
+            <img class="footer__rs-logo" src="images/rss-logo.svg" alt="RS School">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
