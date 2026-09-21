@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог рецептов из фильмов и сериалов на CinemaЕшь.">
+  <title>Каталог — CinemaЕшь</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/theme.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper header__inner">
+      <a class="header__logo-link" href="index.html">
+        <img class="header__logo" src="images/foodcinema.png" alt="CinemaЕшь">
+        <span class="header__logo-text">CinemaЕшь</span>
+      </a>
+      <form class="header__search" role="search">
+        <input class="header__search-input" type="search" name="q" placeholder="Поиск…">
+        <button class="header__search-button" type="submit" aria-label="Поиск">
+          <svg class="header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a class="header__menu-link" href="index.html">Главная</a></li>
+          <li class="header__menu-item"><a class="header__menu-link header__menu-link--active" aria-current="page" href="catalog.html">Каталог</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="index.html#about">О нас</a></li>
+        </ul>
+      </nav>
+      <button class="header__theme-toggle" type="button" aria-label="Переключить тему" aria-pressed="false">
+        <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+        </svg>
+        <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="wrapper">
+      <h1 class="catalog__title">Каталог</h1>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__logo-link" href="index.html">
+            <img class="footer__logo" src="images/foodcinema.png" alt="CinemaЕшь">
+            <span class="footer__logo-text">CinemaЕшь</span>
+          </a>
+          <p class="footer__slogan">Рецепты из любимых фильмов</p>
+        </div>
+        <nav class="footer__nav">
+          <h2 class="footer__title">Навигация</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="catalog.html">Кинорецепты</a></li>
+            <li><a class="footer__link" href="catalog.html">Напитки за кадром</a></li>
+            <li><a class="footer__link" href="index.html#about">О нас</a></li>
+            <li><a class="footer__link" href="#">Контакты</a></li>
+            <li><a class="footer__link" href="#">Вопросы и ответы</a></li>
+            <li><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <h2 class="footer__title">Контакты</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#">hello@cinemaesh.example</a></li>
+            <li>Работаем онлайн</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 CinemaЕшь</p>
+        <p class="footer__credits">
+          Сделано в <a class="footer__link" href="https://rs.school">RS School</a>
+          · <a class="footer__link" href="https://github.com/Valeriameuf">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
