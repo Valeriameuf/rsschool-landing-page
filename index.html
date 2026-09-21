@@ -7,6 +7,7 @@
   <title>CinemaЕшь — рецепты из любимых фильмов</title>
   <link rel="stylesheet" href="styles/style.css">
   <script src="js/theme.js" defer></script>
+  <script src="js/slider.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -43,67 +44,119 @@
     </div>
   </header>
   <main>
-    <section class="hero">
-      <div class="wrapper">
-        <h1 class="hero__title">Рецепты из любимых фильмов</h1>
-        <p class="hero__text">Готовим то, что видели на экране: блюда и напитки из фильмов и сериалов.</p>
-      </div>
-    </section>
-    <section class="recipes">
-      <div class="wrapper">
-        <h2 class="recipes__title">Популярные рецепты из кино</h2>
-        <div class="recipes__list">
-          <article class="card">
-            <img class="card__image" src="images/omletbear.jpeg" alt="Омлет с чипсами и зеленью" loading="lazy">
-            <div class="card__body">
-              <p class="card__film">
-                <img class="card__film-image" src="images/bear.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
-                <span>«Медведь» · сериал, 2022</span>
-              </p>
-              <h3 class="card__title">Омлет с чипсами</h3>
-              <p class="card__text">Нежный омлет с хрустящими чипсами и зеленью. Быстрый завтрак в стиле ресторанной кухни.</p>
-              <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: омлет с чипсами">Смотреть рецепт →</a>
+    <div class="wrapper">
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <p class="hero__label">Кино и кухня</p>
+            <h1 class="hero__title">Рецепты из любимых фильмов</h1>
+            <p class="hero__text">CinemaЕшь собирает блюда и напитки, которые мы видели на экране. Выбирайте фильм, готовьте то же самое дома и смотрите с удовольствием.</p>
+            <div class="hero__actions">
+              <a class="hero__button" href="catalog.html">Смотреть рецепты</a>
+              <a class="hero__link" href="index.html#about">О проекте</a>
             </div>
-          </article>
-          <article class="card">
-            <img class="card__image" src="images/beartort.webp" alt="Кусочки многослойного шоколадного торта" loading="lazy">
-            <div class="card__body">
-              <p class="card__film">
-                <img class="card__film-image" src="images/bears.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
-                <span>«Медведь» · сериал, 2022</span>
-              </p>
-              <h3 class="card__title">Шоколадный торт</h3>
-              <p class="card__text">Многослойный шоколадный торт с плотным кремом. Десерт для тех, кто любит с характером.</p>
-              <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: шоколадный торт">Смотреть рецепт →</a>
-            </div>
-          </article>
-          <article class="card">
-            <img class="card__image" src="images/indeika.jpg" alt="Запечённая индейка с апельсинами и розмарином" loading="lazy">
-            <div class="card__body">
-              <p class="card__film">
-                <img class="card__film-image" src="images/friends.jpg" alt="Кадр из сериала «Друзья»" loading="lazy">
-                <span>«Друзья» · сериал, 1994</span>
-              </p>
-              <h3 class="card__title">Запечённая индейка</h3>
-              <p class="card__text">Праздничная индейка с апельсинами и розмарином. Главное блюдо для большой дружной компании.</p>
-              <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: запечённая индейка">Смотреть рецепт →</a>
-            </div>
-          </article>
-          <article class="card">
-            <img class="card__image" src="images/pay.jpg" alt="Кусок вишнёвого пирога с решёткой из теста" loading="lazy">
-            <div class="card__body">
-              <p class="card__film">
-                <img class="card__film-image" src="images/twinpix.jpeg" alt="Кадр из сериала «Твин Пикс»" loading="lazy">
-                <span>«Твин Пикс» · сериал, 1990</span>
-              </p>
-              <h3 class="card__title">Вишнёвый пирог</h3>
-              <p class="card__text">Сочный вишнёвый пирог с решёткой из теста. Идеально сочетается с чашкой чёрного кофе.</p>
-              <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: вишнёвый пирог">Смотреть рецепт →</a>
-            </div>
-          </article>
+          </div>
+          <img class="hero__image" src="images/twinpix.jpeg" alt="Кадр из сериала «Твин Пикс»: герои держат тарелку с вишнёвым пирогом">
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="slider">
+        <div class="slider__header">
+          <h2 class="slider__title">Популярные рецепты из кино</h2>
+          <div class="slider__controls">
+            <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий рецепт">←</button>
+            <button class="slider__button slider__button--next" type="button" aria-label="Следующий рецепт">→</button>
+          </div>
+        </div>
+        <div class="slider__window">
+          <ul class="slider__track" tabindex="0" aria-label="Рецепты из кино">
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/omletbear.jpeg" alt="Омлет с чипсами и зеленью" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/bear.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
+                    <span>«Медведь» · сериал, 2022</span>
+                  </p>
+                  <h3 class="card__title">Омлет с чипсами</h3>
+                  <p class="card__text">Нежный омлет с хрустящими чипсами и зеленью. Быстрый завтрак в стиле ресторанной кухни.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: омлет с чипсами">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/beartort.webp" alt="Кусочки многослойного шоколадного торта" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/bears.jpg" alt="Кадр из сериала «Медведь»" loading="lazy">
+                    <span>«Медведь» · сериал, 2022</span>
+                  </p>
+                  <h3 class="card__title">Шоколадный торт</h3>
+                  <p class="card__text">Многослойный шоколадный торт с плотным кремом. Десерт для тех, кто любит с характером.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: шоколадный торт">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/indeika.jpg" alt="Запечённая индейка с апельсинами и розмарином" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/friends.jpg" alt="Кадр из сериала «Друзья»" loading="lazy">
+                    <span>«Друзья» · сериал, 1994</span>
+                  </p>
+                  <h3 class="card__title">Запечённая индейка</h3>
+                  <p class="card__text">Праздничная индейка с апельсинами и розмарином. Главное блюдо для большой дружной компании.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: запечённая индейка">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/pay.jpg" alt="Кусок вишнёвого пирога с решёткой из теста" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/twinpix.jpeg" alt="Кадр из сериала «Твин Пикс»" loading="lazy">
+                    <span>«Твин Пикс» · сериал, 1990</span>
+                  </p>
+                  <h3 class="card__title">Вишнёвый пирог</h3>
+                  <p class="card__text">Сочный вишнёвый пирог с решёткой из теста. Идеально сочетается с чашкой чёрного кофе.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: вишнёвый пирог">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/ratatui.jpg" alt="Рататуй из тонко нарезанных овощей на чугунной сковороде" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/ratata.webp" alt="Постер мультфильма «Рататуй»" loading="lazy">
+                    <span>«Рататуй» · мультфильм, 2007</span>
+                  </p>
+                  <h3 class="card__title">Рататуй</h3>
+                  <p class="card__text">Запечённые овощи тонкими ломтиками с чесноком и тимьяном. Блюдо, с которого начинается история мультфильма.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: рататуй">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+            <li class="slider__slide">
+              <article class="card">
+                <img class="card__image" src="images/limonmonika.jpg" alt="Паста с лимоном, пармезаном и зеленью" loading="lazy">
+                <div class="card__body">
+                  <p class="card__film">
+                    <img class="card__film-image" src="images/friends.jpg" alt="Кадр из сериала «Друзья»" loading="lazy">
+                    <span>«Друзья» · сериал, 1994</span>
+                  </p>
+                  <h3 class="card__title">Лимонная паста</h3>
+                  <p class="card__text">Паста с лимоном, пармезаном и свежей зеленью. Лёгкий ужин, который легко повторить дома.</p>
+                  <a class="card__link" href="catalog.html" aria-label="Смотреть рецепт: лимонная паста">Смотреть рецепт →</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
   <footer class="footer">
     <div class="wrapper">
