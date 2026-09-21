@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.hero {
+  padding: 48px 0 0;
+
+  &__title {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-3xl;
+  }
+
+  &__text {
+    font-size: $font-size-lg;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .hero {
+    padding: $spacing-lg 0 0;
+
+    &__title,
+    &__text {
+      font-size: $font-size-xs;
+    }
+  }
+}
