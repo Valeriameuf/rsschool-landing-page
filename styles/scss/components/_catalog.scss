@@ -1,20 +1,116 @@
 @use "../abstracts/variables" as *;
 
+$catalog-breakpoint: 768px;
+
 .catalog {
   padding-top: 48px;
   padding-bottom: 48px;
 
   &__title {
+    margin-bottom: $spacing-sm;
     font-size: $font-size-3xl;
+  }
+
+  &__text {
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-lg;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__tab {
+    padding: 8px 24px;
+    border: 1px solid var(--color-accent-dark);
+    border-radius: 999px;
+    font-size: $font-size-base;
+    color: var(--color-accent-dark);
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+    &:hover {
+      border-color: var(--color-accent-bright);
+      color: var(--color-accent-bright);
+    }
+
+    &--active {
+      border-color: var(--color-accent-bright);
+      background-color: var(--color-accent-bright);
+      color: var(--color-on-accent);
+
+      &:hover {
+        color: var(--color-on-accent);
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: $spacing-lg;
+  }
+
+  &__item {
+    display: flex;
+
+    .card {
+      flex: 1;
+    }
+  }
+
+  &__more {
+    display: none;
+    margin: $spacing-lg auto 0;
+    padding: 10px 32px;
+    border: 1px solid var(--color-accent-bright);
+    border-radius: 999px;
+    font-size: $font-size-base;
+    font-weight: 700;
+    color: var(--color-accent-bright);
+
+    &:hover {
+      background-color: var(--color-accent-bright);
+      color: var(--color-on-accent);
+    }
   }
 }
 
-@media (max-width: $breakpoint-md) {
+@media (max-width: $catalog-breakpoint) {
   .catalog {
     padding-top: $spacing-lg;
     padding-bottom: $spacing-lg;
 
     &__title {
+      font-size: $font-size-xs;
+    }
+
+    &__text {
+      margin-bottom: $spacing-md;
+      font-size: $font-size-xs;
+    }
+
+    &__tabs {
+      margin-bottom: $spacing-md;
+    }
+
+    &__tab {
+      padding: 6px 16px;
+      font-size: $font-size-xs;
+    }
+
+    &__list {
+      gap: $spacing-md;
+    }
+
+    &__item--extra {
+      display: none;
+    }
+
+    &__more {
+      display: block;
       font-size: $font-size-xs;
     }
   }
