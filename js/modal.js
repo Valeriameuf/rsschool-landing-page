@@ -7,7 +7,7 @@ const modalMeta = document.querySelector('.modal__meta');
 const modalRecipe = document.querySelector('.modal__recipe');
 const servingsCount = document.querySelector('.modal__servings-count');
 const servingsButtons = document.querySelectorAll('.modal__servings-button');
-const cards = document.querySelectorAll('.catalog__list .card');
+const cards = document.querySelectorAll('.card');
 
 const minServings = 1;
 const maxServings = 4;
@@ -46,7 +46,7 @@ const openModal = (card) => {
   modalFilm.textContent = film.textContent.trim();
   modalTitle.textContent = title.textContent;
   modalText.textContent = text.textContent;
-  modalMeta.textContent = meta.textContent;
+  modalMeta.textContent = meta ? meta.textContent : '';
   modalRecipe.innerHTML = recipe ? recipe.innerHTML : '';
 
   servings = minServings;
