@@ -18,7 +18,8 @@ const updateItems = () => {
     }
   });
 
-  moreButton.style.display = activeCategory === 'all' && !extraVisible ? 'inline-block' : 'none';
+  moreButton.style.display = activeCategory === 'all' ? 'inline-block' : 'none';
+  moreButton.textContent = extraVisible ? 'Свернуть' : 'Показать ещё';
 };
 
 tabs.forEach((tab) => {
@@ -36,7 +37,7 @@ tabs.forEach((tab) => {
 });
 
 moreButton.addEventListener('click', () => {
-  extraVisible = true;
+  extraVisible = !extraVisible;
   updateItems();
 });
 
