@@ -7,5 +7,15 @@ const scrollByCard = (direction) => {
   track.scrollBy({ left: cardWidth * direction, behavior: 'smooth' });
 };
 
+const updateButtons = () => {
+  const maxScrollLeft = track.scrollWidth - track.clientWidth;
+
+  prevButton.disabled = track.scrollLeft <= 0;
+  nextButton.disabled = track.scrollLeft >= maxScrollLeft - 1;
+};
+
 nextButton.addEventListener('click', () => scrollByCard(1));
 prevButton.addEventListener('click', () => scrollByCard(-1));
+track.addEventListener('scroll', updateButtons);
+
+updateButtons();
