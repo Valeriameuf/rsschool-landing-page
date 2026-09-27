@@ -1,0 +1,90 @@
+@use "../abstracts/variables" as *;
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md;
+
+  &--open {
+    display: flex;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__window {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    background-color: var(--color-hero-bg);
+  }
+
+  &__close {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-sm;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-bg);
+    font-size: $font-size-lg;
+    line-height: 1;
+    color: var(--color-text);
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  &__body {
+    padding: $spacing-lg;
+  }
+
+  &__film {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-xs;
+    font-weight: 700;
+  }
+
+  &__title {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-xl;
+  }
+
+  &__text {
+    margin-bottom: $spacing-sm;
+    font-size: $font-size-sm;
+  }
+
+  &__meta {
+    font-size: $font-size-xs;
+    font-weight: 700;
+    color: var(--color-accent-bright);
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .modal {
+    &__title {
+      font-size: $font-size-base;
+    }
+
+    &__film,
+    &__text,
+    &__meta {
+      font-size: $font-size-xs;
+    }
+  }
+}

@@ -218,6 +218,19 @@
       <button class="catalog__more" type="button">Показать ещё</button>
     </div>
   </main>
+  <div class="modal">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" type="button" aria-label="Закрыть" data-close>×</button>
+      <img class="modal__image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+      <div class="modal__body">
+        <p class="modal__film"></p>
+        <h2 class="modal__title" id="modal-title">&nbsp;</h2>
+        <p class="modal__text"></p>
+        <p class="modal__meta"></p>
+      </div>
+    </div>
+  </div>
   <footer class="footer">
     <div class="wrapper">
       <div class="footer__top">
@@ -266,5 +279,6 @@
   <script src="js/theme.js"></script>
   <script src="js/burger.js"></script>
   <script src="js/catalog.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 </html>
