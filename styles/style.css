@@ -536,6 +536,7 @@ a:hover {
 }
 .slider__slide .card {
   flex: 1;
+  cursor: pointer;
 }
 
 @media (max-width: 960px) {
@@ -599,8 +600,8 @@ a:hover {
 }
 .card__film-image {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -615,6 +616,7 @@ a:hover {
   padding-top: 8px;
   font-size: 16px;
   font-weight: 700;
+  color: var(--color-accent-bright);
 }
 .card__meta {
   margin-top: auto;
