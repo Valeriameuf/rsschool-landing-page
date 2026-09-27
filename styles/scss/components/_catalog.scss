@@ -58,11 +58,15 @@ $catalog-breakpoint: 768px;
 
     .card {
       flex: 1;
+      cursor: pointer;
     }
   }
 
-  &__more {
+  &__item--extra {
     display: none;
+  }
+
+  &__more {
     margin: $spacing-lg auto 0;
     padding: 10px 32px;
     border: 1px solid var(--color-accent-bright);
@@ -105,12 +109,7 @@ $catalog-breakpoint: 768px;
       gap: $spacing-md;
     }
 
-    &__item--extra {
-      display: none;
-    }
-
     &__more {
-      display: block;
       font-size: $font-size-xs;
     }
   }

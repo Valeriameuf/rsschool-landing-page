@@ -212,5 +212,21 @@ $burger-breakpoint: 768px;
     &__burger {
       display: block;
     }
+
+    &__nav {
+      display: none;
+    }
+
+    &__nav--open {
+      display: block;
+      order: 4;
+      width: 100%;
+      margin-top: $spacing-sm;
+
+      .header__menu {
+        flex-direction: column;
+        gap: $spacing-sm;
+      }
+    }
   }
 }

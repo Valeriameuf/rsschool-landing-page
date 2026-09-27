@@ -32,6 +32,16 @@
       border-color: var(--color-accent-bright);
       color: var(--color-accent-bright);
     }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.3;
+
+      &:hover {
+        border-color: var(--color-accent-dark);
+        color: var(--color-accent-dark);
+      }
+    }
   }
 
   &__track {
