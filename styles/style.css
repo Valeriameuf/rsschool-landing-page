@@ -295,6 +295,19 @@ a:hover {
   .header__burger {
     display: block;
   }
+  .header__nav {
+    display: none;
+  }
+  .header__nav--open {
+    display: block;
+    order: 4;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .header__nav--open .header__menu {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 .footer {
   margin-top: auto;
@@ -809,8 +822,10 @@ a:hover {
 .catalog__item .card {
   flex: 1;
 }
-.catalog__more {
+.catalog__item--extra {
   display: none;
+}
+.catalog__more {
   margin: 24px auto 0;
   padding: 10px 32px;
   border: 1px solid var(--color-accent-bright);
@@ -846,11 +861,7 @@ a:hover {
   .catalog__list {
     gap: 16px;
   }
-  .catalog__item--extra {
-    display: none;
-  }
   .catalog__more {
-    display: block;
     font-size: 14px;
   }
 }
